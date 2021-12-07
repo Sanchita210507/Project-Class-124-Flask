@@ -27,8 +27,8 @@ def add_task():
         }, 400)
     contact = {
         'id':tasks[-1]['id'] + 1,
-        'Name':request.json['Name'],
-        'Contact':request.json.get('Contact',""),
+        'title':request.json['description'],
+        'description':request.json.get('description',""),
         'done':False
     }
     tasks.append(contact)
